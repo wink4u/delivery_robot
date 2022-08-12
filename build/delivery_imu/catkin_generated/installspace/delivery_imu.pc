@@ -1,0 +1,8 @@
+prefix=/home/seounghyun/delivery_robot/install
+
+Name: delivery_imu
+Description: Description of delivery_imu
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

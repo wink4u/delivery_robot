@@ -1,0 +1,2 @@
+delivery_bringup:delivery_description:delivery_navigation:delivery_odom:delivery_slam:delivery_teleop:iahrs_driver:sick_lidar
+-DCATKIN_DEVEL_PREFIX=/home/seounghyun/delivery_robot/devel -DCMAKE_INSTALL_PREFIX=/home/seounghyun/delivery_robot/install -G Unix Makefiles

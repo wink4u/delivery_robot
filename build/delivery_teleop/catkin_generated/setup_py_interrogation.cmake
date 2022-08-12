@@ -1,0 +1,7 @@
+set(delivery_teleop_SETUP_PY_SETUP_MODULE "distutils.core")
+set(delivery_teleop_SETUP_PY_VERSION "0.0.0")
+set(delivery_teleop_SETUP_PY_SCRIPTS "")
+set(delivery_teleop_SETUP_PY_PACKAGES "delivery_teleop")
+set(delivery_teleop_SETUP_PY_PACKAGE_DIRS "src/delivery_teleop")
+set(delivery_teleop_SETUP_PY_MODULES "")
+set(delivery_teleop_SETUP_PY_MODULE_DIRS "")

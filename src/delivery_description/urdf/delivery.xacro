@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="delivery_description" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <xacro:include filename="$(find delivery_description)/urdf/properties.xacro"/>
+
+  <link name="base_footprint">
+  </link>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.105373806431093 -0.0268342152242113 -0.18953796400823"
+        rpy="0 0 0" />
+      <mass
+        value="19.3670867263227" />
+      <inertia
+        ixx="0.180199476960233"
+        ixy="4.65019406363343E-05"
+        ixz="0.00667982752086705"
+        iyy="0.150100468983469"
+        iyz="-3.02424617398531E-07"
+        izz="0.28199056471646" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="white"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="base_link_joint"
+    type="fixed">
+    <origin
+      xyz="-0.1 0 0.32"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <link
+    name="left_caster_link">
+    <inertial>
+      <origin
+        xyz="8.36465108255413E-05 -0.0479999252236514 -0.0033887894674014"
+        rpy="0 0 0" />
+      <mass
+        value="4.1597696620843" />
+      <inertia
+        ixx="0.0197147389726975"
+        ixy="-8.68173352934346E-09"
+        ixz="7.39120565383492E-07"
+        iyy="0.0349433541440901"
+        iyz="-2.58507449966292E-09"
+        izz="0.0197119019381436" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/left_caster_link.STL" />
+      </geometry>
+      <material
+        name="orange"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/left_caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="left_caster_joint"
+    type="continuous">
+    <origin
+      xyz="-0.65308 0.29202 -0.27811"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_caster_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  <link
+    name="right_caster_link">
+    <inertial>
+      <origin
+        xyz="-5.34696286102476E-05 0.0480000751431961 -0.00338940047554892"
+        rpy="0 0 0" />
+      <mass
+        value="4.15976960880837" />
+      <inertia
+        ixx="0.0197147941329066"
+        ixy="-9.24215879331336E-09"
+        ixz="6.2186836048647E-07"
+        iyy="0.0349433541383669"
+        iyz="-2.28857853923918E-09"
+        izz="0.0197118467591219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/right_caster_link.STL" />
+      </geometry>
+      <material
+        name="orange"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/right_caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="right_caster_joint"
+    type="continuous">
+    <origin
+      xyz="-0.65295 -0.29185 -0.27811"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_caster_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00032108936140432 -0.0266888252222172 -0.00490796244988945"
+        rpy="0 0 0" />
+      <mass
+        value="5.7312393124275" />
+      <inertia
+        ixx="0.0518708308100698"
+        ixy="5.2406707098094E-08"
+        ixz="1.88033524362296E-06"
+        iyy="0.0992917255059242"
+        iyz="-2.72582909508502E-07"
+        izz="0.0518785675184401" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="orange"/>  
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.011969 0.296 -0.23231"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.000321114089232244 0.0266888258029959 -0.00490806056076376"
+        rpy="0 0 0" />
+      <mass
+        value="5.73123935841044" />
+      <inertia
+        ixx="0.051871137769569"
+        ixy="3.84400013264854E-08"
+        ixz="2.44020855603869E-06"
+        iyy="0.0992917137517311"
+        iyz="-2.8190249592306E-07"
+        izz="0.0518782471770993" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="orange"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.011969 -0.296 -0.23231"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="-0.0175 2.77555756156289E-17 -0.00499999999999989"
+        rpy="0 0 0" />
+      <mass
+        value="0.01225" />
+      <inertia
+        ixx="1.35260416666667E-06"
+        ixy="-4.46842622552556E-39"
+        ixz="-1.54407047676531E-23"
+        iyy="1.35260416666667E-06"
+        iyz="1.57668124523473E-23"
+        izz="2.50104166666667E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="white"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="-0.030244 -8.5819E-05 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="base_scan">
+    <inertial>
+      <origin
+        xyz="-0.0393928613044235 0.000278743092291978 -0.0296188826087058"
+        rpy="0 0 0" />
+      <mass
+        value="0.437230565959106" />
+      <inertia
+        ixx="0.000527686829913781"
+        ixy="-1.35386664366042E-06"
+        ixz="-2.99452353622908E-06"
+        iyy="0.000546778625310383"
+        iyz="-6.23863817936083E-07"
+        izz="0.000350768149944236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/base_scan.STL" />
+      </geometry>
+      <material
+        name="white"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delivery_description/meshes/base_scan.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="scan_joint"
+    type="fixed">
+    <origin
+      xyz="-0.16597 0.01568 0.072"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_scan" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+</robot>

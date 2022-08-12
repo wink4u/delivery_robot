@@ -1,0 +1,8 @@
+prefix=/home/seounghyun/delivery_robot/devel
+
+Name: delivery_teleop
+Description: Description of delivery_teleop
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs rospy

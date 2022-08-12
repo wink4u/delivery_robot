@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find delivery_description)/launch/delivery.launch"/>
+  
+  <include file="$(find sick_lidar)/launch/sick_tim571_2050101.launch"/>
+
+  <include file="$(find delivery_bringup)/launch/delivery_core.launch"/>
+
+  <include file="$(find iahrs_driver)/launch/iahrs_driver.launch"/>
+  
+</launch>

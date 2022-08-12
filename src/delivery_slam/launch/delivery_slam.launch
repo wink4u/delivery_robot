@@ -1,0 +1,16 @@
+<launch>
+    <!-- Arguments -->
+   <arg name="open_rviz" default="true"/>
+
+    <include file="$(find delivery_bringup)/launch/delivery_bringup.launch">
+    </include>
+    
+    <include file="$(find delivery_slam)/launch/delivery_gmapping.launch">
+    </include>
+    
+    <!-- Rviz  -->
+    <group if="$(arg open_rviz)"> 
+        <node pkg="rviz" type="rviz" name="rviz" required="true"
+            args="-d $(find delivery_slam)/rviz/delivery_gmapping.rviz"/>
+    </group>
+</launch>
